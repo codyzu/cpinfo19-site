@@ -1,3 +1,4 @@
+# Reveal.js
 .idea/
 *.iml
 *.iws
@@ -11,3 +12,10 @@ node_modules/
 .sass-cache
 css/reveal.min.css
 js/reveal.min.js
+
+# Jekyll Bootstrap
+_site
+.sass-cache
+.jekyll-metadata
+node_modules
+Gemfile.lock

@@ -1,5 +1,15 @@
+# reveal.js
 language: node_js
 node_js:
   - 11
 after_script:
   - npm run build -- retire
+
+# jekyll bootstrap
+language: ruby
+rvm:
+  - 2.5
+before_install:
+  - gem update --system
+  - gem install bundler
+script: bundle exec jekyll build
