@@ -8,9 +8,6 @@ title: Home
   <p class="lead">Here you will find resources for the CPINFO-19 web dev course.</p>
 </div>
 
-<hr class="my-4">
-
-
 <div class="card">
   <div class="card-header">
     Module 1: JavaScript Intro
