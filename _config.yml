@@ -30,6 +30,7 @@ repository: "codyzu/cpinfo19-site"
 plugins:
   - jekyll-feed
   - jekyll-sitemap
+  - jekyll-redirect-from
 
 # A list of the pages to display in the navigation bar
 header_pages:
