@@ -14,7 +14,7 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 title: CPINFO-19 Web Dev
-email: "cody.zuschlag@gmail.com"
+# email: "cody.zuschlag@gmail.com"
 description: >- # this means to ignore newlines until "baseurl:"
   CPINFO-19 Web Development Homepage
 #baseurl: "" # the subpath of your site, e.g. /blog
