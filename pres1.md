@@ -1,13 +1,5 @@
 ---
 layout: reveal
 title: presentation 1
+slides: module1.md
 ---
-
-# this is a page
----
-
----
-
-# this is a new page
-
-hello
