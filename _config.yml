@@ -16,7 +16,7 @@
 title: CPINFO-19 Web Dev
 # email: "cody.zuschlag@gmail.com"
 description: >- # this means to ignore newlines until "baseurl:"
-  CPINFO-19 Web Development Homepage
+  Resources related CPINFO-19 Web Development course
 #baseurl: "" # the subpath of your site, e.g. /blog
 #url: "" # the base hostname & protocol for your site, e.g. http://example.com
 #twitter_username: jekyllrb
