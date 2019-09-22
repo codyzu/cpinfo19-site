@@ -2,6 +2,7 @@
   <div class="container">
     <a class="navbar-brand" rel="author" href="{{ "/" | relative_url }}">{{ site.title | escape }}</a>
 
+    {% comment %}
     {%- assign page_paths = site.header_pages -%}
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
       aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -17,12 +18,11 @@
           </li>
           {%- endif -%}
         {% endfor -%}
-        {% comment %}
-        <li class="nav-item">
+        <!-- <li class="nav-item">
           <a class="nav-link" href="{{ site.github.repository_url }}">Fork me on Github</a>
-        </li>
-        {% endcomment %}
+        </li> -->
       </ul>
     </div>
+    {% endcomment %}
   </div>
 </nav>
