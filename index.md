@@ -1,8 +1,8 @@
 ---
 layout: page
-title: CPINFO-19 Web Dev
+title: Home
 ---
 
-# CPINFO-19 Web Development Homepage
+# Welcome to CPINFO-19 Web Development
 
 Here you will find resources for the CPINFO-19 web dev course.
