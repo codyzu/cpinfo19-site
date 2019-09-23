@@ -12,7 +12,7 @@ title: Home
 
 Here you will find resources for the CPINFO-19 web dev course.
 
-<div class="card border-info">
+<div class="card border-info" style="max-width: 50em">
   <h2 class="card-header">Module 1: JavaScript Intro</h2>
   <div class="card-body">
     <!-- <h5 class="card-title">Special title treatment</h5>
