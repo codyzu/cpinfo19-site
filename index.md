@@ -17,7 +17,7 @@ Here you will find resources for the CPINFO-19 web dev course.
   <div class="card-body">
     <!-- <h5 class="card-title">Special title treatment</h5>
     <p class="card-text">With supporting text below as a natural lead-in to additional content.</p> -->
-    <a href="welcome.html" class="btn btn-primary">Presentation</a>
+    <a href="module1.html" class="btn btn-primary">Presentation</a>
   </div>
 </div>
 
