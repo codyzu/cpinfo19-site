@@ -33,8 +33,8 @@ const me = {
 <!-- # Activity
 ---
 ## where are you from?
-
---- -->
+-->
+--- 
 
 # Module 1: JavaScript
 ---
