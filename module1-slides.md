@@ -12,7 +12,7 @@ const me = {
     // Full name
     name: 'Cody Zuschlag',
     // Where do I work?
-    employer: 'Hubware',
+    employer: 'Nearform',
     // What experience do I have?
     experience: ['C', 'C++', 'C#', 'Java', 'JavaScript'],
     // What languages do I speak?
@@ -30,11 +30,11 @@ const me = {
 
 <!-- ._slide: data-background-image="./images/code.png" data-background-size="100px" data-background-position="top 10px left 10px" data-background-opacity="0.75" -->
 <!-- .slide: data-background-image="./images/code.png" data-background-size="auto 10%" data-background-position="bottom" data-background-opacity="0.75" -->
-# Activity
+<!-- # Activity
 ---
 ## where are you from?
 
----
+--- -->
 
 # Module 1: JavaScript
 ---
