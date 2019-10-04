@@ -27,13 +27,14 @@ const me = {
 - 📝 2 tests
 - 💻 homework (devoir)
 
-
 <!-- ._slide: data-background-image="./images/code.png" data-background-size="100px" data-background-position="top 10px left 10px" data-background-opacity="0.75" -->
 <!-- .slide: data-background-image="./images/code.png" data-background-size="auto 10%" data-background-position="bottom" data-background-opacity="0.75" -->
 <!-- # Activity
 ---
 ## where are you from?
 -->
+
+
 --- 
 
 # Module 1: JavaScript
@@ -48,7 +49,7 @@ const me = {
 * 1995: Brendan Eicht 👉 Netscape
 * "LiveScript" -> "JavaScript" (marketing)
 * 1997: ECMAScript standard 1
-  * es3, ~~es4~~, es5, es2016...
+  * es3, ~~es4~~, es5, es2016, ..., es2019
 
 notes:
 * created to make web an application platform
