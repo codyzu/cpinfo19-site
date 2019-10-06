@@ -59,7 +59,7 @@ The results is a 2 dimensional array containing the name data. The data looks li
 ]
 ```
 
-## Exercise 1.0 Query the total number of times the prenom `CODY` has been used in France.
+### Exercise 1.0 Query the total number of times the prenom `CODY` has been used in France.
 
 ### Hints
 
