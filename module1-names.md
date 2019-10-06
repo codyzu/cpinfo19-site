@@ -1,7 +1,7 @@
 ---
 title: Module 1 - Prenoms Exercise
 ---
-# Query CSV data
+# 🔍 Query CSV data
 
 For this activity, we will use the [Ficher des prénoms](https://www.insee.fr/fr/statistiques/2540004) data from INSEE.
 
