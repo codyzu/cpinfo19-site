@@ -264,7 +264,7 @@ This course 👈 **modern** JavaScript (ECMAScript)
 
 # Prototypal Inheritance
 * objects inherit from other objects
-* no vtable
+* no "vtable"
 * lighter and expressive compared to class inheritance
 
 
@@ -294,7 +294,7 @@ This course 👈 **modern** JavaScript (ECMAScript)
 ## class 👍 👎
 * "syntatic sugar" over legacy construtors, not true classes
 * `this` or that?
-* usefule for migrating from other languages
+* useful for migrating from other languages
 
 
 ## factories 👍
@@ -322,7 +322,7 @@ This course 👈 **modern** JavaScript (ECMAScript)
 
 # Bonus: FP
 ---
-* 1st class function
+* 1st class functions
 * dividing
 
 ---
