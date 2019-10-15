@@ -27,6 +27,10 @@ const me = {
 - 📝 2 tests
 - 💻 homework (devoir)
 
+
+# ⚠️ Note
+Bring a USB drive 💾!!!
+
 ---
 
 # Module 1: JavaScript
