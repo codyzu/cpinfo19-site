@@ -63,7 +63,11 @@ The results is a 2 dimensional array containing the name data. The data looks li
 
 ### Hints
 
-The following functions will help you write "filter" then "count" (reduce) the data.
+There are multiple ways to implement the algorithm. One way would be to:
+1. "filter" all of the data by `CODY`
+1. count ("reduce") the remaining data
+
+The following functions will help you:
 
 * [`Array.prototype.filter()`](https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Objets_globaux/Array/filter)<sup>[en](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter)</sup>
 * [`Array.prototype.reduce()`](https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Objets_globaux/Array/reduce)<sup>[en](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reduce)</sup>
