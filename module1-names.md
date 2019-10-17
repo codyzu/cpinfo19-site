@@ -53,7 +53,7 @@ const data = fs
   .map(line => line.trim().split(';'));
 ```
 
-## 1.3 
+## 1.3 Working with arrays 
 
 The results is a 2 dimensional array containing the name data. The data looks like this:
 
@@ -65,6 +65,8 @@ The results is a 2 dimensional array containing the name data. The data looks li
   // ...
 ]
 ```
+
+We can now filter and reduce the data to determine something interesting.
 
 #### Exercise 1.1 What is the total number of times the name `CODY` has been used in France.
 
