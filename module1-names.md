@@ -7,7 +7,7 @@ For this activity, we will use the [Ficher des prénoms](https://www.insee.fr/fr
 
 ⚠️ Download the file from the prof for the fastest results!
 
-## 1.0 Parsing a text file
+## 1.1 Parsing a text file
 
 The file is CSV (comma separated values) format. It is very easy to parse with node.js.
 Refer to the [documentation](https://www.insee.fr/fr/statistiques/2540004#documentation) for an explanation of the data in the file.
@@ -22,7 +22,7 @@ const fileText = fs.readFileSync('./nat2018.csv', 'utf8');
 
 We set the encoding to `utf8` since we want to read the file as an UTF8 text string.
 
-## 1.1 String manipulation
+## 1.2 String manipulation
 
 Now that the entire file is read into a string, we can manipulate the string into a data structure that will be useful for us.
 
@@ -52,6 +52,8 @@ const data = fs
   .split('\n')
   .map(line => line.trim().split(';'));
 ```
+
+## 1.3 
 
 The results is a 2 dimensional array containing the name data. The data looks like this:
 
