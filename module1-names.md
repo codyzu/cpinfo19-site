@@ -59,7 +59,7 @@ The results is a 2 dimensional array containing the name data. The data looks li
 ]
 ```
 
-### Exercise 1.0 Query the total number of times the prenom `CODY` has been used in France.
+#### Exercise 1.1 Query the total number of times the name `CODY` has been used in France.
 
 ### Hints
 
@@ -73,8 +73,8 @@ The following functions will help you:
 * [`Array.prototype.reduce()`](https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Objets_globaux/Array/reduce)<sup>[en](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reduce)</sup>
 * [`Number.parseInt()`](https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Objets_globaux/Number/parseInt)<sup>[en](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/parseInt)</sup>
 
-### Exercise 1.1 How many times has your prenom been used in France? (If you prenom isn't found, use your neighbor's)?
+#### Exercise 1.2 How many times has your name been used in France? (If you name isn't found, use your neighbor's)?
 
-### Exercise 1.2 In what year was your prenom most popular?
+#### Exercise 1.3 In what year was your name most popular?
 
-### Exercise 1.3 What is the most popular prenom of all time in France?
+#### Exercise 1.4 What is the most popular name of all time in France?
