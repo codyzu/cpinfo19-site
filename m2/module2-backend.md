@@ -1,9 +1,7 @@
 ---
 title: Module 2 - Node.js Express Server
 ---
-# 🌩 Backend Server with Express
-
-# Module 2: Express with templates
+# 🌩 Module 2: Backend - Express with templates
 
 Welcome.
 
@@ -12,14 +10,14 @@ There is a working version of this exercise [here](https://cpinfo-m2-express-pug
 ## 1 Express hello world
 
 ```cmd
-mkdir my-express-app
-cd my-express-app
+mkdir weather
+cd weather
 
 yarn init
 
-yarn add express jimp
+yarn add express
 ```
-_Press enter in all of the yarn prompts._
+👉 _Press enter for all of the `yarn` questions._
 
 Create the file `app.js`:
 ```javascript
@@ -27,13 +25,16 @@ const express = require('express');
 const app = express();
 const port = 3000;
 
-app.get('/', (req, res) => res.send('Hello World!'));
+app.get('/', (req, res) => res.send('Hello CPINFO!'));
 
 app.listen(port, () => console.log(`Example app listening on port ${port}!`));
 ```
 
+💡 Tip: Enable VSCode "auto-save" feature to save your files automatically.
+
 Test your server with `node .\app.js` and navigate to [http://localhost:3000](http://localhost:3000).
 
+You can kill your app by pressing `ctrl+c` in the console.
 
 ## Bonus
 
@@ -42,6 +43,8 @@ Add nodemon to make it easier to debug your web server.
 ```cmd
 yarn add --dev nodemon
 ```
+
+💡 The `--dev` switch makes `nodemon` a "development" dependency: a dependency that is not required to use your application, but is required to develop it.
 
 Add the following to your `package.json`:
 ```json
@@ -57,6 +60,8 @@ Now run your server with:
 npm run dev
 ```
 
+Try modifying the message returned in your server, save the file, and notice the server automatically restarts.
+
 ## 2 Server side templates with pug
 
 Follow the [steps to integrate a templating engine](https://expressjs.com/fr/guide/using-template-engines.html) into your express server.
@@ -71,12 +76,12 @@ app.set('views', './views');
 app.set('view engine', 'pug');
 
 // Replace your existing app.get('/', ...) with this new route:
-app.get('/', (req, res) => {
-  res.render('index', { title: 'Hey', message: 'Hello there!'});
+app.get('/hello', (req, res) => {
+  res.render('hello-page', {title: 'Hey', message: 'Hello there!'});
 });
 ```
 
-Create a pug template file in `views/index.pug`:
+Create a pug template file in `views/hello-page.pug`:
 ```pug
 html
   head
@@ -85,10 +90,13 @@ html
     h1= message
 ```
 
-Test your new index page by  navigating to [http://localhost:3000](http://localhost:3000). Open the chrome dev tools and look at the rendered HTML. Notice that the message and title and passed as variables.
+ℹ️ Be sure to read some of the documentation about the [pug templating language](https://pugjs.org/language/tags.html).
+
+Test your new index page by  navigating to [http://localhost:3000/hello](http://localhost:3000/hello). Open the chrome dev tools and look at the rendered HTML. Notice that the message and title and passed as variables.
 
 Open the chrome dev tools and look at the source file.
 
+<!-- TODO: update screenshot -->
 ![chrome developer tools](./images/inspect.jpg)
 
 #### Question 2.1: What did the line `h1= message` in index.pug render to in HTML?
@@ -102,7 +110,7 @@ Add the following configuration into your `app.js`:
 app.use(express.static('public'));
 ```
 
-Add some large image files (refer to your previous project) into the directory `public/images`.
+Add some image files from the internet (3 or 4) into the directory `public/images`.
 
 Test your static files by navigating to [http://localhost:3000/images/abc.jpg](http://localhost:3000/images/abc.jpg)
 
@@ -114,6 +122,16 @@ Test your static files by navigating to [http://localhost:3000/images/abc.jpg](h
 * Using the same mechanism that allowed us to pass the `message` and `title` variables to the template, we can pass an array of image paths.
 * You will have to load the image paths using the `fs` module (refer to the code you wrote during the previous course).
 * The goal is to render an `<img src="images/..." />` tag for each image in your images directory. Refer to the [pug documentation](https://pugjs.org/language/attributes.html) for how to set attributes with pug.
+
+
+## Call an API
+
+Install [axios](https://github.com/axios/axios):
+```cmd
+yarn add axios
+```
+
+Axios will let us call other APIs.
 
 #### Exercise 3.2: Add a new route `/thumbs/:image` that renders a resized (200x200 max) version of an image using Jimp.
 
