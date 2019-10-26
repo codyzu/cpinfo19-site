@@ -192,12 +192,16 @@ app.get('/testasync', async (req, res) => {
 
 In Visual Studio Code:
 * Open the debugger panel:
+  
   ![debugger panel](images/vscode-debugger-panel.jpg)
 * Open the launch config:
+  
   ![debugger launch config](images/vscode-debugger-config.jpg)
 * Configure the debugger to open our `app.js` file:
+  
   ![debugger set config](images/vscode-debugger-config2.jpg)
 * Set a breakpoint in the code and start the debugger:
+  
   ![debugger start](images/vscode-debugger-start.jpg)
 * Refresh the browser and see the application break at the breakpoint. You can inspect the local variables, update values, and step through the code.
 * ⚠️ If you application is running in the console, be sure to kill it before starting the debugger.
