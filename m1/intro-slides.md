@@ -25,6 +25,7 @@ const me = {
 
 - 📦 6 modules
 - 📝 2 tests
+- ✔️ ❌ Grades (Notes)
 - 💻 homework (devoir)
 
 
@@ -46,6 +47,7 @@ Bring a USB drive 💾!!!
 * "LiveScript" -> "JavaScript" (marketing)
 * 1997: ECMAScript standard 1
   * es3, ~~es4~~, es5, es2016, ..., es2019
+* ECMAScript vs JavaScript
 
 notes:
 * created to make web an application platform
