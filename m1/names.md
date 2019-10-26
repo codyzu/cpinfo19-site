@@ -1,13 +1,13 @@
 ---
 title: Module 1 - Prenoms Exercise
 ---
-# 🔍 Query CSV data
+# 🔍 Module 1: Query CSV data
 
 For this activity, we will use the [Ficher des prénoms](https://www.insee.fr/fr/statistiques/2540004) data from INSEE.
 
 ⚠️ Download the file from the prof for the fastest results!
 
-## 1.1 Parsing a text file
+## 1 Parsing a text file
 
 The file is CSV (comma separated values) format. It is very easy to parse with node.js.
 Refer to the [documentation](https://www.insee.fr/fr/statistiques/2540004#documentation) for an explanation of the data in the file.
@@ -22,7 +22,7 @@ const fileText = fs.readFileSync('./nat2018.csv', 'utf8');
 
 We set the encoding to `utf8` since we want to read the file as an UTF8 text string.
 
-## 1.2 String manipulation
+## 2 String manipulation
 
 Now that the entire file is read into a string, we can manipulate the string into a data structure that will be useful for us.
 
@@ -38,7 +38,7 @@ To understand the above code, here are links in French and English to documentat
 * [`String.prototype.split()`](https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Objets_globaux/String/split)<sup>[en](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/split)</sup>
 * [`String.prototype.trim()`](https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Objets_globaux/String/Trim)<sup>[en](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/Trim)</sup>
 
-🐛 We can debug any variable by writing to the console:
+🚫🐛 We can debug any variable by writing to the console:
 ```javascript
 console.log(data);
 ```
@@ -53,7 +53,7 @@ const data = fs
   .map(line => line.trim().split(';'));
 ```
 
-## 1.3 Working with arrays 
+## 3 Working with arrays 
 
 The results is a 2 dimensional array containing the name data. The data looks like this:
 
@@ -68,7 +68,7 @@ The results is a 2 dimensional array containing the name data. The data looks li
 
 We can now filter and reduce the data to determine something interesting.
 
-#### Exercise 1.1 What is the total number of times the name `CODY` has been used in France.
+#### Exercise 3.1 What is the total number of times the name `CODY` has been used in France.
 
 ### Hints
 
@@ -86,8 +86,8 @@ The following functions may help you:
 * [`Object.entries()`](https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Objets_globaux/Object/entries)<sup>[en](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/entries)</sup>
 * [`Number.parseInt()`](https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Objets_globaux/Number/parseInt)<sup>[en](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/parseInt)</sup>
 
-#### Exercise 1.2 How many times has your name been used in France? (If your name isn't found, use your neighbor's)?
+#### Exercise 3.2 How many times has your name been used in France? (If your name isn't found, use your neighbor's)?
 
-#### Exercise 1.3 In what year was your name most popular?
+#### Exercise 3.3 In what year was your name most popular?
 
-#### Exercise 1.4 What is the most popular name of all time in France?
+#### Exercise 3.4 What is the most popular name of all time in France?
