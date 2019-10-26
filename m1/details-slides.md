@@ -34,6 +34,11 @@ vs Java
 
 </small>
 
+
+| |java|javascript|
+|-|-|-|
+|detail|a|b|
+
 ---
 
 # How to 💡 JavaScript
