@@ -247,17 +247,10 @@ This course 👈 **modern** JavaScript (ECMAScript)
 
 ---
 
-# Bonus: FP
----
-* 1st class functions
-* dividing
-
----
-
 # Homework (Devoir)
 ---
 1. create google account
 1. create github account
-1. email me:
+1. email cody.zuschlag@gmail.com:
   * google email address
   * github username
