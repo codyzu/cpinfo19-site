@@ -10,7 +10,8 @@ title: Java vs JavaScript
 |Compilation|source code compiled to byte code (type checking)|sometimes transformed and/or compressed (minimized), but compilation not necessary|
 |Types|statically typed|dynamically typed|
 |Portability|"write once, run anywhere" (still depends on JVM version and implementation)|Was horribly fragmented, today much better thanks to ECMA|
-|OOP|Everything is OO|possible with prototypes|prototypal|
+|OOP|Everything is OO|possible with prototypes|
+|Inheritance|OO Class|prototypal|
 |Concurrency|Thread model|Async callbcks with event loop|
 |First class functions|"kind of" since java 8|Yes|
 |Function overloading|Yes|"kind of" with ... rest operator in args|
