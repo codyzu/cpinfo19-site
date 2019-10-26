@@ -11,7 +11,7 @@ When building a web application, you will most certainly need to call some APIs.
 * **API** - **A**pplication **P**rogramming **I**nterface
 * **REST** - **RE**presentational **S**tate **T**ransaction
 
-### 💡Tip: You can either test the APIs with Chrome or wth [Postman](https://www.getpostman.com/) (download from the instructor).
+**💡Tip: You can either test the APIs with Chrome or wth [Postman](https://www.getpostman.com/) (download from the instructor).**
 
 ## 1 Darksky weather ⛈ API
 

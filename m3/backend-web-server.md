@@ -185,8 +185,20 @@ app.get('/testasync', async (req, res) => {
   * Install it `yarn add lodash`
   * Require it `const _ = require('lodash');`
   * Use it `_.get(/* ... */);`
-* remember that pug can iterate over an array of values by using the [`each`](https://pugjs.org/language/iteration.html#each) keyword (i.e. you should iterate over the 7 forecast days)
+* Remember that pug can iterate over an array of values by using the [`each`](https://pugjs.org/language/iteration.html#each) keyword (i.e. you should iterate over the 7 forecast days)
+* Consider adding some fancy icons like [feather icons](https://feathericons.com/). Here is an example pug template with an icon:
+  ```pug
+  html
+  head
+    script(src='https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js')
+  body
+    p
+      i(data-feather='cloud-lightning')
+      |
+      | Today it is raining!
 
+    script feather.replace({width: '1em', height: '1em'})
+  ```
 
 ## Bonus: Debugger 🚫🐛
 
