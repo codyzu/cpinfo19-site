@@ -25,9 +25,9 @@ Darksky also gives access to an API we can use to get a 10 day weather forecast.
 1. Test your account by clicking on the _Sample API Call_.
    1. Add `?lang=fr&units=si` to your _Sample API Call_ to set the language and units, the result should be URL similar to: https://api.darksky.net/forecast/YOUR_SECRET_KEY/37.8267,-122.4233?lang=fr&units=si
    1. The latitude and longitude of Annecy is: `45.89911,6.1287`, update your request to get the weather for Annecy.
+  
+   ![darksky api key](images/darksky-api.jpg)
 1. Note your _Secret Key_ for later.
-
-![darksky api key](images/darksky-api.jpg)
 
 ## 2.2 Here geocoding 🌐 API
 
@@ -36,7 +36,7 @@ The Darksky weather API accepts an exact latitude and longitude coordinate for t
 [Here](https://www.here.com/) offers several location tools, including a **geocoding API**. With their freemium plan we can make 250000 requests per month for free.
 
 1. Go to https://developer.here.com/sign-up?create=Freemium-Basic and create a freemium account.
-1. Once you have created a freemium project, on the project details page, copy the `APP ID` and `APP CODE`.
+1. Once you have created a freemium project, on the project details page, copy the `APP ID` and `APP CODE`:
    ![here api keys](images/here-api.jpg)
 1. The [here geocode api documentation](https://developer.here.com/documentation/geocoder/topics/quick-start-geocode.html) shows how we can make an api request.
 1. Open https://geocoder.api.here.com/6.2/geocode.json?app_id=YOUR_APP_ID&app_code=YOUR_APP_CODE&searchtext=annecy+france to see the geocode results for Annecy, France.
