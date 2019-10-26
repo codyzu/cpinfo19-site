@@ -11,6 +11,8 @@ When building a web application, you will most certainly need to call some APIs.
 * **API** - **A**pplication **P**rogramming **I**nterface
 * **REST** - **RE**presentational **S**tate **T**ransaction
 
+### 💡Tip: You can either test the APIs with Chrome or wth [Postman](https://www.getpostman.com/) (download from the instructor).
+
 ## 2.1 Darksky weather ⛈ forecast API
 
 Darksky is website and mobile application providing weather forecasts.
@@ -26,8 +28,6 @@ Darksky also gives access to an API we can use to get a 10 day weather forecast.
 1. Note your _Secret Key_ for later.
 
 ![darksky api key](images/darksky-api.jpg)
-
-### 💡Tip: You can also use [Postman](https://www.getpostman.com/) to test and debug api calls.
 
 ## 2.2 Here geocoding 🌐 API
 
