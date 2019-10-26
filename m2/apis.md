@@ -1,8 +1,8 @@
 ---
-title: Module 2.2 - APIs
+title: Module 2 - APIs
 ---
 
-# 🤖 Module 2.2: APIs
+# 🤖 Module 2: APIs
 
 In this module we will practice calling APIs.
 

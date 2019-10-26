@@ -1,7 +1,7 @@
 ---
-title: Module 2 - Node.js Express Server
+title: Module 3 - Node.js Express Server
 ---
-# 🌩 Module 2: Backend - Express with templates
+# 🌩 Module 3: Backend - Express server with templates
 
 Welcome.
 
@@ -177,7 +177,7 @@ app.get('/testasync', async (req, res) => {
 #### Exercise 5.1 Update your `/weather/:city` route to display the 7 day weather forecast for any city. 
 
 #### Hints:
-* Use this algorithm:
+* A basic algorithm looks like this:
   1. fetch the geographical latitude and longitude from the **here API**
   2. parse the longitude and latitude from the response
   3. fetch the weather for the longitude and latitude with the **darksky API**
@@ -185,6 +185,8 @@ app.get('/testasync', async (req, res) => {
   * Install it `yarn add lodash`
   * Require it `const _ = require('lodash');`
   * Use it `_.get(/* ... */);`
+* remember that pug can iterate over an array of values by using the [`each`](https://pugjs.org/language/iteration.html#each) keyword (i.e. you should iterate over the 7 forecast days)
+
 
 ## Bonus: Debugger 🚫🐛
 
