@@ -110,7 +110,7 @@ Add the following configuration into your `app.js`:
 app.use(express.static('public'));
 ```
 
-Add some image files from the internet (3 or 4) into the directory `public/images`.
+Add some image files from the internet (3 or 4) into the directory `public/images` of your project.
 
 Test your static files by navigating to [http://localhost:3000/images/abc.jpg](http://localhost:3000/images/abc.jpg)
 
