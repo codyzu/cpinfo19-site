@@ -114,7 +114,7 @@ Add some image files from the internet (3 or 4) into the directory `public/image
 
 Test your static files by navigating to [http://localhost:3000/images/abc.jpg](http://localhost:3000/images/abc.jpg)
 
-#### Exercise 3.1: Add a new pug view at `views/originals.pug` that renders an html document that dynamically includes each image in an `img` tag and is served at [http://localhost:3000/originals](http://localhost:3000/originals).
+#### Exercise 3.1: Add a new pug view in `views/originals.pug` that renders an html document that dynamically includes each image in an `img` tag and is served at [http://localhost:3000/originals](http://localhost:3000/originals).
 
 #### Hints:
 
@@ -123,37 +123,80 @@ Test your static files by navigating to [http://localhost:3000/images/abc.jpg](h
 * You will have to load the image paths using the `fs` module (refer to the code you wrote during the previous course).
 * The goal is to render an `<img src="images/..." />` tag for each image in your images directory. Refer to the [pug documentation](https://pugjs.org/language/attributes.html) for how to set attributes with pug.
 
+## 4 URL Parameters
 
-## Call an API
+We can create URL parameters by using the `:varname` syntax when adding routes to the app.
 
-Install [axios](https://github.com/axios/axios):
+Inside our route handler, we can then access the value of the variable inside `req.params`. So if our route URL is `/hello/:name` and we navigate to `/hello/cody` in our browser then `req.params.name` is automatically set to `'cody'`.
+
+#### Exercise 4.1 Create a new pug view at `views/weather.pug` that is served with with the url `/weather/:city` and displays a message 'Weather for {CITY_NAME}' where CITY_NAME is the value of the parameter passed in the URL.
+
+## 5 Calling APIs
+
+Install [axios](https://github.com/axios/axios) into your project:
 ```cmd
 yarn add axios
 ```
 
 Axios will let us call other APIs.
 
-#### Exercise 3.2: Add a new route `/thumbs/:image` that renders a resized (200x200 max) version of an image using Jimp.
+Add axios to the require statements at the top of `app.js`:
+```javascript
+const express = require('express');
+const axios = require('axios');
+
+// ...
+```
+
+Calling an API is "asynchronous", meaning the request happens in the background and our code will be notified when it is complete. Axios will let us make API requests using `promises` or `async/await` (this has the advantage of letting us use `try/catch` syntax for error handling).
+
+To use `async/await` with express, we will have to make our handler `async`, allowing us to `await` for asynchronous functions.
+
+To call the api https://jsonplaceholder.typicode.com/albums?userId=2 with axios we can do the following:
+
+```javascript
+app.get('/testasync', async (req, res) => {
+  try {
+    const result = await axios.get('https://jsonplaceholder.typicode.com/albums', {
+      params: {
+        userId: '2'
+      }
+    });
+
+    console.log('STATUS CODE:', result.status, 'DATA:', result.data);
+    res.send(`There are ${result.data.length} albums in the result.`);
+  } catch (error) {
+    console.error('An error occurred:', error.stack);
+    res.status(500).send('Error!');
+  }
+});
+```
+
+ℹ️ Note: the query string of the url `?userId=1` is converted to the `params` option when calling axios.
+
+#### Exercise 5.1 Update your `/weather/:city` route to display the 7 day weather forecast for any city. 
 
 #### Hints:
+* Use this algorithm:
+  1. fetch the geographical latitude and longitude from the **here API**
+  2. parse the longitude and latitude from the response
+  3. fetch the weather for the longitude and latitude with the **darksky API**
+* [lodash](https://lodash.com/) is javascript library with helpful utilities. The lodsah [`get` function](https://lodash.com/docs/#get) will be helpful to parse the latitude/longitude and the daily forecast from the API responses:
+  * Install it `yarn add lodash`
+  * Require it `const _ = require('lodash');`
+  * Use it `_.get(/* ... */);`
 
-* Be sure add Jimp to your project with `yarn add jimp`
-* Jimp can return a binary buffer (a file in memory) by using the [`image.getBufferAsync()`](https://github.com/oliver-moran/jimp/tree/master/packages/jimp#writing-to-buffers) method.
-* Express can send a binary buffer by calling [`res.send(buffer)`](https://expressjs.com/fr/4x/api.html#res.send). However, you will need to set the content type by calling [`res.type()`](https://expressjs.com/fr/4x/api.html#res.type) before sending the buffer. This allows your browser to decide what to do with the binary file, i.e. display the image.
-* Both methods jimp `image.getBufferAsync()` and express `res.type()` requires the mime type to be sent. Fortunately, jimp has a method [`image.getMIME()`](https://github.com/oliver-moran/jimp/tree/master/packages/jimp#writing-to-buffers) that will return the mime type of the original image.
-
-#### Exercise 3.3: Add a new pug view at `views/thumbnails.pug` that renders each image, but with `src` urls pointing to the `/thumb/xyz.jpg` and is served at [http://localhost:3000/thumbnails](http://localhost:3000/thumbnails).
-
-#### Hints:
-
-* This exercise is similar to Exercise 3.2, except you will change the `src` attribute in the `<img />` tags to use the `/thumbs/:image` route that you added in Exercise 3.2.
-
-## Bonus: Debugger
+## Bonus: Debugger 🚫🐛
 
 In Visual Studio Code:
-* Click on Debug->Add Configuration...
-* Choose Node.js
-* Update the launch configuration `program` to launch your app, i.e. `"${workspaceFolder}/index.js"`
-* Add a breakpoint into your code
-* Click on the debugger on the left of the screen and start debugging
+* Open the debugger panel:
+  ![debugger panel](images/vscode-debugger-panel.jpg)
+* Open the launch config:
+  ![debugger launch config](images/vscode-debugger-config.jpg)
+* Configure the debugger to open our `app.js` file:
+  ![debugger set config](images/vscode-debugger-config2.jpg)
+* Set a breakpoint in the code and start the debugger:
+  ![debugger start](images/vscode-debugger-start.jpg)
+* Refresh the browser and see the application break at the breakpoint. You can inspect the local variables, update values, and step through the code.
+* ⚠️ If you application is running in the console, be sure to kill it before starting the debugger.
 
