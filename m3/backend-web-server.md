@@ -9,7 +9,7 @@ There is a working version of this exercise [here](https://cpinfo-m2-express-pug
 
 ## 1 Express hello world
 
-```cmd
+```bash
 mkdir weather
 cd weather
 
