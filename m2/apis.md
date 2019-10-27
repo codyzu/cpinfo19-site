@@ -20,7 +20,8 @@ When building a web application, you will most certainly need to call some APIs.
 Darksky also gives access to an [API](https://darksky.net/dev) we can use to get a 7 day weather forecast. The first 1000 requests per day are free!
 
 ### 1.1 Sign up for Darksky
-1. Go to https://darksky.net/dev and create a new account.
+1. Go to https://darksky.net/dev and signup for a new account.
+   ![darksky signup](images/darksky-signup.jpg)
 1. Confirm your account with the email you received.
 1. Login to your account
 
@@ -39,8 +40,12 @@ The Darksky weather API accepts an exact latitude and longitude coordinate for t
 [Here](https://www.here.com/) offers several location tools, including a **geocoding API**. With their freemium plan we can make 250000 requests per month for free.
 
 ### 2.1 Sign up for Here
-1. Go to https://developer.here.com/sign-up?create=Freemium-Basic and create a freemium account.
-1. Once you have created a freemium project, on the project details page, copy the `APP ID` and `APP CODE`:
+1. Go to https://developer.here.com/sign-up?create=Freemium-Basic and signup a freemium account.
+1. Accept the conditions and click _Start coding_.
+   ![here signup](images/here-signup.jpg)
+1. Click the button _Generate App ID and App Code.
+   ![here generate keys](images/here-create-keys.jpg)
+1. Once the keys are generated, copy the `APP ID` and `APP CODE`:
    ![here api keys](images/here-api.jpg)
 
 ### 2.2 Call Here API
