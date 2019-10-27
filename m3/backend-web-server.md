@@ -199,6 +199,18 @@ app.get('/testasync', async (req, res) => {
 
     script feather.replace({width: '1em', height: '1em'})
   ```
+* The timestamps inside the darksky weather response are in Linux epoch seconds time. JavaScript works with milliseconds. We can parse and format a seconds timestamp like this:
+  ```javascript
+  const time = 1572562800;
+  const timeString = new Date(forecast.time * 1000).toLocaleString();
+  ```
+  Note the same can be done inside a pug template:
+  ```pug
+  html
+    body
+      p The time is #{new Date(time * 1000).toLocalseString()}
+  ```
+  💡Alternatively, you can use [moment.js](https://momentjs.com/) to parse and format date and times.
 
 ## Bonus: Debugger 🚫🐛
 
