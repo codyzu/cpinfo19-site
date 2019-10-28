@@ -28,7 +28,7 @@ Now that the entire file is read into a string, we can manipulate the string int
 
 ```javascript
 const lines = fileText.split('\n');
-const data = lines.map(line => line.trim().split(','));
+const data = lines.map(line => line.trim().split(';'));
 ```
 
 #### Reference
