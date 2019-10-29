@@ -2,7 +2,9 @@
 title: Java vs JavaScript
 ---
 
-# Java vs JavaScript
+# 1 Java vs JavaScript
+
+![java vs javascript](images/group1-java-vs-javascript.jpg)
 
 | |java|javascript|
 |-|-|-|
@@ -19,3 +21,15 @@ title: Java vs JavaScript
 |**XML + JSON**|XML is a language. XML parsing supported out of the box. JSON OK|JSON is a format (not a language). JSON is a subset of JS (is JS). XML possible via npm.|
 |**Exception Handling** (try, catch, finally)|Yes|Yes|
 |**Deployment / Scaling**|typically big server, scaled horizontally (add CPU+mem)|typically containerized, scaled vertically (add instances)|
+
+# 2 What is node.js
+
+![node.js](images/group2-nodejs.jpg)
+
+# 3 Types in JavaScript
+
+![js types](images/group3-js-types.jpg)
+
+# 4 What is npm
+
+![npm](images/group4-npm.jpg)
