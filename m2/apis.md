@@ -1,5 +1,6 @@
 ---
 title: Module 2 - APIs
+redirect_from: /m2
 ---
 
 # 🤖 Module 2: APIs

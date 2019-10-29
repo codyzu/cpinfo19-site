@@ -1,5 +1,6 @@
 ---
 title: Module 1 - Prenoms Exercise
+redirect_from: /m1
 ---
 # 🔍 Module 1: Query CSV data
 
