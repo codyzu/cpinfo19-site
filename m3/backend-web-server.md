@@ -1,11 +1,10 @@
 ---
 title: Module 3 - Node.js Express Server
+redirect_from: /m3
 ---
 # 🌩 Module 3: Backend - Express server with templates
 
-Welcome.
-
-There is a working version of this exercise [here](https://cpinfo-m2-express-pug.firebaseapp.com/).
+<!-- There is a working version of this exercise [here](https://cpinfo-m2-express-pug.firebaseapp.com/). -->
 
 ## 1 Express hello world
 
@@ -186,19 +185,6 @@ app.get('/testasync', async (req, res) => {
   * Require it `const _ = require('lodash');`
   * Use it `_.get(/* ... */);`
 * Remember that pug can iterate over an array of values by using the [`each`](https://pugjs.org/language/iteration.html#each) keyword (i.e. you should iterate over the 7 forecast days)
-* Consider adding some fancy icons like [feather icons](https://feathericons.com/). Here is an example pug template with an icon:
-  ```pug
-  html
-  head
-    script(src='https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js')
-  body
-    p
-      i(data-feather='cloud-lightning')
-      |
-      | Today it is raining!
-
-    script feather.replace({width: '1em', height: '1em'})
-  ```
 * The timestamps inside the darksky weather response are in Linux epoch seconds time. JavaScript works with milliseconds. We can parse and format a seconds timestamp like this:
   ```javascript
   const time = 1572562800;
@@ -211,6 +197,22 @@ app.get('/testasync', async (req, res) => {
       p The time is #{new Date(time * 1000).toLocalseString()}
   ```
   💡Alternatively, you can use [moment.js](https://momentjs.com/) to parse and format date and times.
+* 🚀 **BONUS**: Consider adding some fancy icons like [feather icons](https://feathericons.com/). Here is an example pug template with an icon:
+  ```text
+  html
+  head
+    script(src='https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js')
+  body
+    p
+      i(data-feather='cloud-lightning')
+      |
+      | Today it is raining!
+
+    script feather.replace({width: '1em', height: '1em'})
+  ```
+* 🚀 **BONUS**: Consider add some style with CSS:
+  * You can do ["inline" styling in pug](https://pugjs.org/language/attributes.html#style-attributes) if you are a CSS guru.
+  * Alternatively, consider adding [bootstrap](https://getbootstrap.com/) (or another CSS library) to do something fancy!
 
 ## Bonus: Debugger 🚫🐛
 

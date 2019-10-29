@@ -20,9 +20,18 @@ Here you will find resources for the CPINFO-19 web dev course.
 ### 📺 [Presentation - Details](m1/details.html)
 ### 👩‍🔧 [Exercise 1.0: Query Name Data](m1/names.html)
 
+---
+
 ## Module 2: APIs
 
 ### 👩‍🔧 [APIs](m2/apis.html)
+
+---
+
+## Module 3: Web service
+
+### 👩‍🔧 [Backend web service](m3/backend-web-server.md)
+
 <!-- <div class="card border-info" style="max-width: 50em">
   <h2 class="card-header">Module 1: JavaScript Intro</h2>
   <div class="card-body">
