@@ -119,7 +119,15 @@ Test your static files by navigating to [http://localhost:3000/images/abc.jpg](h
 
 * pug can iterate over an array of values by using the [`each`](https://pugjs.org/language/iteration.html#each) keyword.
 * Using the same mechanism that allowed us to pass the `message` and `title` variables to the template, we can pass an array of image paths.
-* You will have to load the image paths using the `fs` module (refer to the code you wrote during the previous course).
+* You will have to load the image paths using the `fs` module:
+  ```javascript
+  const fs = require('fs');
+  
+  // ...
+
+  const imageFiles = fs.readDirSync('./public/images');
+  console.log('image files:', imageFiles);
+  ```
 * The goal is to render an `<img src="images/..." />` tag for each image in your images directory. Refer to the [pug documentation](https://pugjs.org/language/attributes.html) for how to set attributes with pug.
 
 ## 4 URL Parameters
