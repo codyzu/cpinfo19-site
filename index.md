@@ -29,7 +29,7 @@ Here you will find resources for the CPINFO-19 web dev course.
 
 ---
 
-## Module 3: Web service
+## Module 3: Web Server
 
 ### 👩‍🔧 [Backend Web Service](m3/backend-web-server.md)
 
