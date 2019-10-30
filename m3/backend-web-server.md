@@ -74,7 +74,6 @@ Add to your `app.js`:
 app.set('views', './views');
 app.set('view engine', 'pug');
 
-// Replace your existing app.get('/', ...) with this new route:
 app.get('/hello', (req, res) => {
   res.render('hello-page', {title: 'Hey', message: 'Hello there!'});
 });
