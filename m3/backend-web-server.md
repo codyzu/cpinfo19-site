@@ -125,7 +125,7 @@ Test your static files by navigating to [http://localhost:3000/images/abc.jpg](h
   
   // ...
 
-  const imageFiles = fs.readDirSync('./public/images');
+  const imageFiles = fs.readdirSync('./public/images');
   console.log('image files:', imageFiles);
   ```
 * The goal is to render an `<img src="images/..." />` tag for each image in your images directory. Refer to the [pug documentation](https://pugjs.org/language/attributes.html) for how to set attributes with pug.
