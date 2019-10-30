@@ -56,14 +56,14 @@ Add the following to your `package.json`:
 
 Now run your server with:
 ```cmd
-npm run dev
+yarn dev
 ```
 
 Try modifying the message returned in your server, save the file, and notice the server automatically restarts.
 
 ## 2 Server side templates with pug
 
-Follow the [steps to integrate a templating engine](https://expressjs.com/fr/guide/using-template-engines.html) into your express server.
+Follow the [steps to integrate a templating engine](https://expressjs.com/fr/guide/using-template-engines.html) into your express server:
 
 ```cmd
 yarn add pug
@@ -89,7 +89,7 @@ html
     h1= message
 ```
 
-ℹ️ Be sure to read some of the documentation about the [pug templating language](https://pugjs.org/language/tags.html).
+⚠️ Be sure to read some of the documentation about the [pug templating language](https://pugjs.org/language/tags.html).
 
 Test your new index page by  navigating to [http://localhost:3000/hello](http://localhost:3000/hello). Open the chrome dev tools and look at the rendered HTML. Notice that the message and title and passed as variables.
 
