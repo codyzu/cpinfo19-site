@@ -28,7 +28,7 @@ title: Module 4 - NoSQL vs SQL
                     👉 ORM to help read / write objects across tables
                 </small>
             </td>
-            <td>
+            <td valign="top">
                 <strong>documents</strong><br/>
                 <small>
                     👉 "semi-structured data"<br/>
