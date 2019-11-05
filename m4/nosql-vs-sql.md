@@ -4,22 +4,27 @@ title: Module 4 - NoSQL vs SQL
 
 # Module 4: NoSQL Document Based DB 🤜💥🤛 SQL Relational DB
 
-<table class="table">
+<style>
+th, td {
+    vertical-align: top;
+}
+</style>
+<table class="table-striped">
     <thead>
         <tr>
-            <th></th>
-            <th>SQL</th>
-            <th>NoSQL</th>
+            <th scope="col"></th>
+            <th scope="col">SQL</th>
+            <th scope="col">NoSQL</th>
         </tr>
     </thead>
     <tbody>
         <tr>
-            <td><h3>storage</h3></td>
+            <th scope="row">storage</th>
             <td><strong>tables</strong></td>
             <td><strong>collections</strong></td>
         </tr>
         <tr>
-            <td><h3>object encapsulation</h3></td>
+            <th scope="row">object encapsulation</th>
             <td>
                 <strong>rows</strong><br/>
                 <small>
@@ -30,7 +35,7 @@ title: Module 4 - NoSQL vs SQL
                     👉 ORM to help read / write objects across tables
                 </small>
             </td>
-            <td valign="top">
+            <td>
                 <strong>documents</strong><br/>
                 <small>
                     👉 "semi-structured data"<br/>
@@ -40,7 +45,7 @@ title: Module 4 - NoSQL vs SQL
             </td>
         </tr>
         <tr>
-            <td><h3>identification</h3></td>
+            <th scope="row">identification</th>
             <td>
                 <strong>primary key</strong><br/>
                 <small>👉1 row may not be an entire object</small>
@@ -54,7 +59,7 @@ title: Module 4 - NoSQL vs SQL
             </td>
         </tr>
         <tr>
-            <td><h3>organization</h3></td>
+            <th scope="row">organization</th>
             <td><strong>table names</strong></td>
             <td>
                 <strong>tree</strong><br/>
@@ -62,7 +67,7 @@ title: Module 4 - NoSQL vs SQL
             </td>
         </tr>
         <tr>
-            <td><h3>encoding</h3></td>
+            <th scope="row">encoding</th>
             <td>
                 <strong>table schema</strong><br/>
                 <small>👉 column types</small>
@@ -73,12 +78,12 @@ title: Module 4 - NoSQL vs SQL
             </td>
         </tr>
         <tr>
-            <td><h3>indexes</h3></td>
-            <td>yes</td>
-            <td>yes</td>
+            <th scope="row">indexes</th>
+            <td>yes ✔️</td>
+            <td>yes ✔️</td>
         </tr>
         <tr>
-            <td><h3>queries</h3></td>
+            <th scope="row">queries</th>
             <td>
                 <strong>SQL</strong> query language<br/>
                 <small>👉 powerful and complicated</small>
@@ -88,7 +93,7 @@ title: Module 4 - NoSQL vs SQL
             </td>
         </tr>
         <tr>
-            <td><h3>schema</h3></td>
+            <th scope="row">schema</th>
             <td>
                 defined at table creation <em>before</em> adding data<br/>
                 <small>👉 can be modified, but every row must match schema</small>
@@ -99,7 +104,7 @@ title: Module 4 - NoSQL vs SQL
             </td>
         </tr>
         <tr>
-            <td><h3>schema migrations</h3></td>
+            <th scope="row">schema migrations</th>
             <td>
                 <strong>data must always be valid</strong><br/>
                 <small>
@@ -116,7 +121,7 @@ title: Module 4 - NoSQL vs SQL
             </td>
         </tr>
         <tr>
-            <td><h3>scalability</h3></td>
+            <th scope="row">scalability</th>
             <td>
                 <strong>vertical</strong><br/>
                 <small>
@@ -133,7 +138,7 @@ title: Module 4 - NoSQL vs SQL
             </td>
         </tr>
         <tr>
-            <td><h3>examples</h3></td>
+            <th scope="row">examples</th>
             <td>PostgreSQL, MySQL, Oracle, Microsoft SQL server</td>
             <td>MongoDB, Redis, Cassandra, CouchDB, Firestore</td>
         </tr>
