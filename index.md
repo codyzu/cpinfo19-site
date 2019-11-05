@@ -35,7 +35,20 @@ Here you will find resources for the CPINFO-19 web dev course.
 
 ---
 
-test
+{% comment %}
+## Exam 1 📝
+
+### Review ✔️
+* [Module 1 Introduction Activity](m1/group-activity)
+  * Java vs JavaScript
+  * node.js
+  * JavaScript types
+  * npm
+* [Express](m3/backend-web-server)
+  * Add a route with a URL parameter
+* [NoSQL](m4/nosql-vs-sql)
+  * Advantages / Disadvantages
+{% endcomment %}
 
 <!-- <div class="card border-info" style="max-width: 50em">
   <h2 class="card-header">Module 1: JavaScript Intro</h2>
