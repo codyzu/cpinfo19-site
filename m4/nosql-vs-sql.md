@@ -14,23 +14,42 @@ title: Module 4 - NoSQL vs SQL
         </tr>
         <tr>
             <td><h3>storage</h3</td>
-            <td><strong>tables</strong</td>
+            <td><strong>tables</strong></td>
             <td><strong>collections</strong></td>
         </tr>
         <tr>
-            <td><h3>encapsulation</h3></td>
+            <td><h3>object encapsulation</h3></td>
             <td>
                 <strong>rows</strong><br/>
-                <small>👉 object may be split into multiple rows and across multiple tables</small>
+                <small>
+                    👉 object may be split into multiple rows and across multiple tables (requiring ORM)<br/>
+                    👉 normalized to remove duplication<br/>
+                    👉 a single row may or may not have meaning to the application<br/>
+                    👉 query with joins<br/>
+                    👉 ORM to help read / write objects across tables
+                </small>
             </td>
-            <td><strong>documents</strong></td>
+            <td>
+                <strong>documents</strong><br/>
+                <small>
+                    👉 "semi-structured data"<br/>
+                    👉 an entire object is typically encoded into a single document<br/>
+                    👉 <strong>de-normalized</strong> to improve query perf & API requests (makes updates and deletions complex 👎😿)
+                </small>
+            </td>
         </tr>
         <tr>
             <td><h3>identification</h3></td>
-            <td><strong>primary key</strong></td>
+            <td>
+                <strong>primary key</strong><br/>
+                <small>👉1 row may not be an entire object</small>
+            </td>
             <td>
                 <strong>document id</strong><br/>
-                <small>👉 key value pair</small>
+                <small>
+                    👉 key value pair<br/>
+                    👉 entire document can be fetched with id
+                </small>
             </td>
         </tr>
         <tr>
@@ -59,15 +78,12 @@ title: Module 4 - NoSQL vs SQL
         </tr>
         <tr>
             <td><h3>queries</h3></td>
-            <td><strong>SQL</strong> query language</td>
-            <td><strong>Query API</strong></td>
-        </tr>
-        <tr>
-            <td><h3>objects</h3></td>
-            <td><strong>normalized</strong> into multiple tables & rows</td>
             <td>
-                objects stored in their entirety<br/>
-                <small>👉 <strong>de-normalized</strong> to improve query perf & API requests</small>
+                <strong>SQL</strong> query language<br/>
+                <small>👉 powerful and complicated</small>
+            </td>
+            <td>Query <strong>API</strong> or language<br/>
+                <small>👉 generally simpler but limited</small>
             </td>
         </tr>
         <tr>
@@ -98,6 +114,27 @@ title: Module 4 - NoSQL vs SQL
                 </small>
             </td>
         </tr>
+        <tr>
+            <td><h3>scalability</h3></td>
+            <td>
+                <strong>vertical</strong><br/>
+                <small>
+                    👉 add memory, CPU, SSD, etc.<br/>
+                    👉 adding floors to a building
+                </small>
+            </td>
+            <td>
+                <strong>horizontal</strong><br/>
+                <small>
+                    👉 sharding (replication over multiple servers/sites)<br/>
+                    👉 adding buildings to a neighborhood
+                </small>
+            </td>
+        </tr>
+        <tr>
+            <td><h3>examples</h3></td>
+            <td>PostgreSQL, MySQL, Oracle, Microsoft SQL server</td>
+            <td>MongoDB, Redis, Cassandra, CouchDB, Firestore</td>
+        </tr>
     </tbody>
 </table>
-
