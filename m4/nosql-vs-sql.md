@@ -9,11 +9,10 @@ title: Module 4 - NoSQL vs SQL
         <tr>
             <td></td>
             <td><h2>SQL</h2></td>
-            <td><h2>NoSQL</h2</td>
-            <td></td>
+            <td><h2>NoSQL</h2></td>
         </tr>
         <tr>
-            <td><h3>storage</h3</td>
+            <td><h3>storage</h3></td>
             <td><strong>tables</strong></td>
             <td><strong>collections</strong></td>
         </tr>
