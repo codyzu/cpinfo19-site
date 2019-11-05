@@ -2,7 +2,7 @@
 title: Module 4 - NoSQL
 redirect_from: /m4
 ---
-# Module 4 NoSQL
+# Module 4 NoSQL 💧🧙
 
 # 1 NoSQL introduction
 
