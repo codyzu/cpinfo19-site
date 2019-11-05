@@ -2,7 +2,7 @@
 title: Module 4 - NoSQL vs SQL
 ---
 
-# Module 4: NoSQL Document Based DB vs SQL Relational DB
+# Module 4: NoSQL Document Based DB 🤜💥🤛 SQL Relational DB
 
 <table>
     <tbody>
@@ -23,45 +23,80 @@ title: Module 4 - NoSQL vs SQL
                 <strong>rows</strong><br/>
                 <small>👉 object may be split into multiple rows and across multiple tables</small>
             </td>
-            <td>documents</td>
+            <td><strong>documents</strong></td>
         </tr>
         <tr>
             <td><h3>identification</h3></td>
-            <td>primary key in table</td>
-            <td>document id (key value pair)</td>
+            <td><strong>primary key</strong></td>
+            <td>
+                <strong>document id</strong><br/>
+                <small>👉 key value pair</small>
+            </td>
         </tr>
         <tr>
             <td><h3>organization</h3></td>
-            <td>table names, namespaces</td>
-            <td>tree, similar to filesystem</td>
+            <td><strong>table names</strong></td>
+            <td>
+                <strong>tree</strong><br/>
+                <small>👉 similar to filesystem (directories and files)</small>
+            </td>
         </tr>
         <tr>
             <td><h3>encoding</h3></td>
-            <td>column types</td>
-            <td>encoded into standard format: JSON, XML, etc.</td>
+            <td>
+                <strong>table schema</strong><br/>
+                <small>👉 column types</small>
+            </td>
+            <td>
+                encoded into <strong>standard format</strong><br/>
+                <small>👉 JSON, XML, etc.</small>
+            </td>
         </tr>
         <tr>
             <td><h3>indexes</h3></td>
-            <td></td>
-            <td></td>
+            <td>yes</td>
+            <td>yes</td>
         </tr>
         <tr>
             <td><h3>queries</h3></td>
-            <td></td>
-            <td></td>
+            <td><strong>SQL</strong> query language</td>
+            <td><strong>Query API</strong></td>
         </tr>
         <tr>
             <td><h3>objects</h3></td>
-            <td>normalized into multiple tables</td>
+            <td><strong>normalized</strong> into multiple tables & rows</td>
             <td>
                 objects stored in their entirety<br/>
-                de-normalized to improve query perf
+                <small>👉 <strong>de-normalized</strong> to improve query perf & API requests</small>
             </td>
         </tr>
         <tr>
             <td><h3>schema</h3></td>
-            <td>must be defined at table creation, can be modified, but every row mush match schema</td>
-            <td>no schema</td>
+            <td>
+                defined at table creation <em>before</em> adding data<br/>
+                <small>👉 can be modified, but every row must match schema</small>
+            </td>
+            <td>
+                <strong>no schema</strong><br/>
+                <small>👉 documents still <em>need</em> common structure to facilitate queries, but this is not enforced by the DB</small>
+            </td>
+        </tr>
+        <tr>
+            <td><h3>schema migrations</h3></td>
+            <td>
+                <strong>data must always be valid</strong><br/>
+                <small>
+                    👉 add new columns then complete existing rows<br/>
+                    👉 often done with service "offline"
+                </small>
+            </td>
+            <td>
+                <strong>data is never validated</strong><br/>
+                <small>
+                    👉 modify all existing data to new structure (may require going "offline")<br/>
+                    👉 migrate data at application time documents are accessed (requires code that supports multiple versions of structure)
+                </small>
+            </td>
         </tr>
     </tbody>
 </table>
