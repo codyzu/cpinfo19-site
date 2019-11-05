@@ -4,13 +4,15 @@ title: Module 4 - NoSQL vs SQL
 
 # Module 4: NoSQL Document Based DB 🤜💥🤛 SQL Relational DB
 
-<table>
-    <tbody>
+<table class="table">
+    <thead>
         <tr>
-            <td></td>
-            <td><h2>SQL</h2></td>
-            <td><h2>NoSQL</h2></td>
+            <th></th>
+            <th>SQL</th>
+            <th>NoSQL</th>
         </tr>
+    </thead>
+    <tbody>
         <tr>
             <td><h3>storage</h3></td>
             <td><strong>tables</strong></td>
