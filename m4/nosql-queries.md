@@ -107,7 +107,7 @@ There is an existing Firestore DB with single "countries" collection. Here is an
 
 ## 2.1 Node.js setup
 
-Setup project to do queries:
+Setup a *new* project to do queries (do not add this to our express.js project):
 
 1. Create a **new** node.js project named `countries`:
    ```cmd
@@ -168,7 +168,7 @@ We can access a Firestore document by id with the `doc()` method of the Collecti
 
 References, as their names imply, are a reference to a document in the DB. In order to read the contents of the document we have to fetch the document with the `get()` method. However, `get()` returns a promise since it is an asynchronous operation. We will use the await keyword access the resolved value of the promise The promise will resolve to a [DocumentSnapshot](https://firebase.google.com/docs/reference/js/firebase.firestore.DocumentSnapshot) which is the state of the document at the moment it was fetched from the DB.
 
-Add the following code into your `queryCountries()` function:
+Add the following code into your `queryCountries()` function (replacing `// YOUR CODE HERE`):
 
 ```javascript
 const countries = firestore.collection('countries');
@@ -177,12 +177,12 @@ const franceSnapshot = await franceRef.get();
 console.log(franceSnapshot.data());
 ```
 
-Execute your restaurants.js script to see the results. 
+Execute your countries.js script to see the results. 
 ```cmd
 node .\countries.js
 ```
 
-Of course, we could have fetched the document with a single line of code:
+Of course, we could have *replaced* the above code with a single line:
 
 ```javascript
 const franceSnapshot2 = await firestore
@@ -192,7 +192,7 @@ const franceSnapshot2 = await firestore
 console.log(franceSnapshot2.data());
 ```
 
-#### Question 2.1: What is the value of `area` in the FRA document?
+#### Exercise 2.1: What is the value of `area` in the FRA document?
 
 The DocumentSnapshot has some other interesting properties:
 - `id` - Contains the id of the document. Note that the data of the document and the id are not stored in the same place.
@@ -211,19 +211,19 @@ const european = await countries
 
 The first parameter to the `where()` function is the field or path to query on, followed by an operator, followed by the value to compare with.
 
-Executing a query returns a [QuerySnapshot](https://firebase.google.com/docs/reference/js/firebase.firestore.QuerySnapshot). We can access the DocumentSnapshot's via the `docs` property of the QuerySnapshot. The `docs` property contains an array of DocumentSnapshots.
+Executing a query returns a [QuerySnapshot](https://firebase.google.com/docs/reference/js/firebase.firestore.QuerySnapshot). The QuerySnapshot returns an array of DocumentSnapshots that can access via the `docs` property. The `docs` property contains an array of DocumentSnapshots.
 
-#### Question 2.2: How could you transform the docs property to an array containing the data of each document? Write the line of code below to transform the docs property to an array of document data. (Hint: use map)
+#### Exercise 2.2: How could you transform the docs property to an array containing the data of each document? Write the line of code below to transform the docs property to an array of document data. (Hint: use map)
 
 There are two other useful properties of a QuerySnapshot:
 - `size` - The number of documents in the snapshot.
 - `empty` - True if there are no documents in the snapshot.
 
-Remember, the `where()` function can use a path to a nested field. For example, to the path to the french language would be `'languages.fra'`.
+Remember, the `where()` function can use a path to a nested field. For example, the path to the french language is `'languages.fra'`.
 
-#### Question 2.3: How many countries speak "French"?
+#### Exercise 2.3: How many countries speak "French"?
 
-#### Question 2.4: How many countries speak "English"?
+#### Exercise 2.4: How many countries speak "English"?
 
 There are several operators we can use in a where clause:
 - `'<'`

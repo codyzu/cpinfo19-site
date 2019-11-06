@@ -116,7 +116,7 @@ th, td {
                 <strong>data is never validated</strong><br/>
                 <small>
                     👉 modify all existing data to new structure (may require going "offline")<br/>
-                    👉 migrate data at application time documents are accessed (requires code that supports multiple versions of structure)
+                    👉 migrate data at application time when documents are accessed (requires code that supports multiple versions of structure)
                 </small>
             </td>
         </tr>
@@ -133,7 +133,8 @@ th, td {
                 <strong>horizontal</strong><br/>
                 <small>
                     👉 sharding (replication over multiple servers/sites)<br/>
-                    👉 adding buildings to a neighborhood
+                    👉 adding buildings to a neighborhood<br/>
+                    👉 ideal for large DBs and geographic distribution
                 </small>
             </td>
         </tr>
