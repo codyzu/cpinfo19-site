@@ -35,7 +35,15 @@ Here you will find resources for the CPINFO-19 web dev course.
 
 ---
 
+## Module 4: NoSQL
+
+### 📝 [SQL vs NoSQL](m4/nosql-vs-sql)
+### 👩‍🔧 [NoSQL Queries](m4/nosql-queries)
+### 👩‍🔧 [Adding Firestore to Express](m4/express-nosql)
+
 {% comment %}
+---
+
 ## Exam 1 📝
 
 ### Review ✔️
