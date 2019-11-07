@@ -41,7 +41,6 @@ Here you will find resources for the CPINFO-19 web dev course.
 ### 👩‍🔧 [NoSQL Queries](m4/nosql-queries)
 ### 👩‍🔧 [Adding Firestore to Express](m4/express-nosql)
 
-{% comment %}
 ---
 
 ## Exam 1 📝
@@ -56,7 +55,6 @@ Here you will find resources for the CPINFO-19 web dev course.
   * Add a route with a URL parameter
 * [NoSQL](m4/nosql-vs-sql)
   * Advantages / Disadvantages
-{% endcomment %}
 
 <!-- <div class="card border-info" style="max-width: 50em">
   <h2 class="card-header">Module 1: JavaScript Intro</h2>
