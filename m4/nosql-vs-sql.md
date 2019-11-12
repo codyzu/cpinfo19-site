@@ -29,7 +29,7 @@ th, td {
                 <strong>rows</strong><br/>
                 <small>
                     👉 object may be split into multiple rows and across multiple tables (requiring ORM)<br/>
-                    👉 normalized to remove duplication<br/>
+                    👉 <strong>normalized</strong> to remove duplication<br/>
                     👉 a single row may or may not have meaning to the application<br/>
                     👉 query with joins<br/>
                     👉 ORM to help read / write objects across tables
