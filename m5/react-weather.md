@@ -20,9 +20,9 @@ React **is not** a complete framework for creating a web application. React prov
 
 Use your express weather app from the previous course.
 
-1. **⚠️ Change your express app to use port `4000`.**
+1. **⚠️ Change your express app to use port `4000`.** The react development server will use port `3000` so it must be free to avoid conflicts.
 
-   At the top of your `app.js` file, change the code that starts your express server to use port `4000`. The code that starts express should resemble:
+   At the top of the `app.js` file, change the code that starts your express server to use port `4000`. The code that starts express should resemble:
 
    ```javascript
    const app = express();
@@ -37,7 +37,7 @@ Use your express weather app from the previous course.
    1. `/weather/:city` 👉 renders the pug template with the forecast
    1. `/api/weather/:city` 👉 returns the json weather data as json
 
-   ☝️ The code to fetch the geo-coordinates from the city and the forecast the geo-coordinates is the same code! Create a function that both express routes call.
+   ☝️ The code to **1) fetch the geo-coordinates for a city** and 2) **fetch the forecast for the geo-coordinates** is the **same code** for both routes! Create a function that both express routes call.
 
    Remember, you can render a pug template with `res.render("tempate-name", data)` or send an object as json with `res.send(data)`.
 
@@ -75,11 +75,13 @@ Use your express weather app from the previous course.
    }
    ```
 
-1. Test your refactor in the browser and assure that both `/weather/annecy` and `/api/weather/annecy` both work.
+1. Test your refactored express app in the browser and assure that both `/weather/annecy` and `/api/weather/annecy` both work.
+
+   ![weather api json](images/weather-api-json.jpg)
 
 ## 4 Create a **new** app for the react weather app
 
-1. From the parent directory of your `weather`, create a new react project for the weather interface:
+1. From the **parent** directory of the `weather` project, create a **new** react project for the weather interface:
 
    ```cmd
    cd ..
@@ -113,13 +115,13 @@ Use your express weather app from the previous course.
    ```
 1. Configure the proxy in `package.json` to hit the express app.
 
+   Our react development server does not know about our express server running on port `4000`. We can [configure it to "proxy"](https://create-react-app.dev/docs/proxying-api-requests-in-development/) any unknown URLs to our express server.
+
    Inside `weather-app/package.json` add the following line (**add a comma depending on where you add the line**):
 
    ```json
    "proxy": "http://localhost:4000"
    ```
-
-   Our react development server will run on port `3000` and will "proxy" any missing requests to `localhost:4000`, our express server.
 
 1. Add the file `weather-app/src/index.js`:
 
@@ -270,12 +272,13 @@ Next we will add the 2 components that will make up our app: `<SearchBar>` and `
 
    ☝️ This component has some new concepts:
 
-   - _💡 A functional component is simply a function that returns JSX directly `() => <div>...</div>` or can calculate components with JavaScript and return JSX at the end of the function ☝️._
-   - _💡 React passes a single parameter to functional components. This parameter is most commonly named `props`, short for "properties". We will see later how we can pass data to components using properties._
-   - _💡 As noted before, a component function returns JSX. JSX combines HTML like syntax with JavaScript inside `{ }` brackets._
+   - 💡 React passes a single parameter to functional components. This parameter is most commonly named `props`, short for "properties". We will see later how we can pass data to components using properties.
+   - 💡 As noted before, a component function returns JSX. JSX combines HTML like syntax with JavaScript inside `{ }` brackets.
    - The forecast component adds a `div` tag and then maps the daily data to return the date and max temperature surrounded by `p` tags.
 
 1. Render the `<SearchBar>` and `<Forecast>` component inside the `<App>` component:
+
+   Inside `weather-app/src/index.js`:
 
    ```jsx
    // const SearchBar = ...
@@ -311,10 +314,10 @@ React components can be called (or "rendered") at any time (read about the lifec
 
 We have to tell react to only fetch our data the first time the App is is rendered. We also have to tell react that we want to store some data that should _only_ change when we, the programmer, want it to change.
 
-To accomplish the above points, we have use react "hooks" to hook into the react framework. We will use 2 hooks:
+To accomplish the above points, we use [react "hooks"](https://reactjs.org/docs/hooks-intro.html) to hook into the react framework. We will use 2 hooks:
 
-- `useEffect`: tell react that we want to execute some code that could "effect" what is rendered. An example is calling our express server weather API.
-- `useState`: ask react to store some data for us and give use the ability to set and get that data. The data will remain the same until it gets set to something else. An example is the results of calling our weather API. Later, we will add a search box and button that will call the API and update the state.
+- [`useEffect`](https://reactjs.org/docs/hooks-effect.html): tell react that we want to execute some code that could "effect" what is rendered. An example is calling our express server weather API.
+- [`useState`](https://reactjs.org/docs/hooks-state.html): ask react to store some data for us and give use the ability to set and get that data. The data will remain the same until it gets set to something else. An example is the results of calling our weather API. Later, we will add a search box and button that will call the API and update the state.
 
 1. Add [axios](https://github.com/axios/axios) to your react app. We previously used axios to call the here and Dark Sky APIs. We will now use axios to call _our_ express server weather API 🚀!
 
@@ -343,8 +346,8 @@ To accomplish the above points, we have use react "hooks" to hook into the react
    };
    ```
 
-   - Pass the default "empty" state to the `useState` function. This is modeled on what we expect our weather API to return: the `daily` weather object that contains a `daily` array of weather for each day.
-   - `useState` returns an array containing two objects. The current value (initially the state we passed) and a function to set the state.
+   - Pass the default "empty" state to the `useState` function. This is modeled on what we expect our weather API to return: the **daily** weather object that contains an array, named `data`, that will contain the weather for each day.
+   - `useState` returns an array containing two objects. The current value `daily` (initially the state we passed) and a function `setDaily` that can set the state.
    - ⚠️ Don't forget to add `useState` (and `useEffect` for later) to your imports. Modify the line `import React from 'react';` to:
 
      ```javascript
@@ -370,17 +373,17 @@ To accomplish the above points, we have use react "hooks" to hook into the react
    };
    ```
 
+   - Notice that we store the data into the state with the `setDaily` function.
+
    ⚠️ Don't forget to import `axios` in the top of your `index.js` file. You can import it with:
 
    ```javascript
    import axios from "axios";
    ```
 
-   Notice that we store the data into the state with the `setDaily` function.
-
 1. Load the weather for a fixed city, "Annecy" for example.
 
-   We can ask to react to call a function when a component is rendered the fist time with `useEffect(doSomething, [])`. The second parameter, the empty `[]` array tell react to call this function on the first time the component is rendered (or mounted in react vocabulary). See the documentation for details.
+   We can ask react to call a function when a component is rendered for the fist time with `useEffect(doSomething, [])`. The second parameter, the empty `[]` array tells react to call this function on the first time the component is rendered (or "mounted"). See the [documentation](https://reactjs.org/docs/hooks-reference.html#conditionally-firing-an-effect) for details.
 
    Inside `weather-app/src/index.js`, add the code to call our api on the first time the the `<App>` component is rendered:
 
@@ -415,11 +418,11 @@ Managing state is a complicated task. Large projects often store the majority of
 
 ## 10 Build out the forecast component
 
-#### Exercise 10.1: Using the work you did to create a beautiful forecast with the pug templates and express server, complete the `<Forecast>` component to show the summary, date, min and max temperatures for each day.
+#### Exercise 10.1: Using the work you did to create a beautiful forecast with the pug templates with the express server, complete the `<Forecast>` component to show the summary, date, min and max temperatures for each day.
 
 💡 Hint: consider creating a separate `<Day>` component to simplify the code inside the `<Forecast>` component.
 
-Find inspiration from https://weather.cpinfo19.cecilecody.life
+Find inspiration from [weather.cpinfo.cecilecody.life](https://weather.cpinfo19.cecilecody.life).
 
 ## 11 Add the search box
 
@@ -427,7 +430,7 @@ The application still does not yet allow us to search for a city.
 
 Next we will add the search functionality that will allow us to call the api with a city entered by the user.
 
-We will use an HTML form to combine multiple input elements into a single component.
+We will use an HTML `<form>` to combine multiple input elements into a single component.
 
 In HTML, we would create a simple search bar like so:
 
@@ -481,7 +484,7 @@ In HTML, we would create a simple search bar like so:
    ```
 
    - Notice we bind the input `value` and `onChange` properties to our state and a handler function that sets the state.
-   - We also write our our event handler for the forms `onSubmit` event. This handler doesn't do anything useful for now. It also calls `preventDefault()` to avoid the page refreshing when the user clicks on the Search button.
+   - We also write our event handler for the forms `onSubmit` event. This handler doesn't do anything useful for now. It also calls `preventDefault()` to avoid the page refreshing when the user clicks on the Search button.
 
 1. Test the `SearchBar` in Chrome. Note that the search value is logged to the developer tools console.
 
@@ -491,7 +494,9 @@ In HTML, we would create a simple search bar like so:
 
 ⚠️ Warning: be sure to remove `useEffect()` from the `<App>` component once the search bar is working.
 
-#### Bonus 11.2: It is also possible to "automatically" search as the user types. Modify the `<SearchBar>` to eliminate the need for the user to click on the Search button. See weather.cpinfo19.cecilecody.fr for an example.
+#### Bonus 11.2: It is also possible to "automatically" search as the user types. Modify the `<SearchBar>` to eliminate the need for the user to click on the Search button.
+
+See [weather.cpinfo19.cecilecody.life](https://weather.cpinfo19.cecilecody.life) for an example.
 
 💡 Hint: the package [`use-debounce`](https://github.com/xnimorz/use-debounce) provides an excellent implementation that delays (or "debounces") changes until the user _stops_ typing for 1000 ms. See the [Debounced Callbacks](https://github.com/xnimorz/use-debounce#debounced-callbacks) documentation.
 
