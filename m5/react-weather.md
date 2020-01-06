@@ -4,7 +4,7 @@ title: Module 5 - React
 
 # Module 5 - React weather interface
 
-⛈👀 See it live at https://weather.cpinfo19.cecilecody.life
+⛈👀 See it live at [weather.cpinfo19.cecilecody.life](https://weather.cpinfo19.cecilecody.life)
 
 ## 1 What is React
 
@@ -22,7 +22,7 @@ Use your express weather app from the previous course.
 
 1. **⚠️ Change your express app to use port `4000`.**
 
-   At the top of your `app.js` file, change the code that starts your express server to use port `4000`. The dode that starts express should resemble:
+   At the top of your `app.js` file, change the code that starts your express server to use port `4000`. The code that starts express should resemble:
 
    ```javascript
    const app = express();
@@ -240,7 +240,7 @@ const ShoppingList = props => (
 
    ![react dev tools](images/dev-tools-react-components.jpg)
 
-#### Question 7.1: Inside the react dev tools, what happens if you change the property `name` the App component?
+#### Question 7.1: Inside the react dev tools, what happens if you change the property `name` in the App component?
 
 ## 8 Add search and forecast components
 
