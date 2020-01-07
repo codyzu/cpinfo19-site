@@ -52,6 +52,8 @@ Here you will find resources for the CPINFO-19 web dev course.
 
 ### 👩‍🔧 [React Weather App](m5/react-weather)
 
+---
+
 ## Exam 1 📝
 
 ### ✔️ Review
