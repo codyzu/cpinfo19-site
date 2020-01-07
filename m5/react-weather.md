@@ -308,16 +308,26 @@ Next we will add the 2 components that will make up our app: `<SearchBar>` and `
 
    ![forecast](./images/forecast-stubbed.jpg)
 
-## 8 Fetch the weather data from the express server
+## 8 State
 
-React components can be called (or "rendered") at any time (read about the lifecycle in the docs).
+So far we have seen properties. Properties cannot be modified by a component, they are _immutable_. Properties let React efficiently decide when something needs to be rendered. If the properties have not changed, React does not need to re-render the component.
 
-We have to tell react to only fetch our data the first time the App is is rendered. We also have to tell react that we want to store some data that should _only_ change when we, the programmer, want it to change.
+The code that makes up React components can be called (or "rendered") at any time (read about the [lifecycle in the docs](https://reactjs.org/docs/state-and-lifecycle.html)).
 
-To accomplish the above points, we use [react "hooks"](https://reactjs.org/docs/hooks-intro.html) to hook into the react framework. We will use 2 hooks:
+Components can also have state. State can be changed by a component. When the state changes, React re-renders the component. **React needs to know when state changes in order for it to decide if a component and it's children need to be re-rendered.** Therefore, when working with state, we have to make React aware.
 
+There are of course multiple ways to manage state. In this course we will use [React "hooks"](https://reactjs.org/docs/hooks-intro.html). **Hooks let us use functional components and work with state.**
+
+## 9 Fetch the weather data from the express server
+
+We have to ask react to store the results from calling our express server in state. Since we haven't completed the search bar, for now we will ask react to fetch the weather only when our app loads.
+
+To accomplish the above points, we will use 2 react hooks:
+
+- [`useState`](https://reactjs.org/docs/hooks-state.html): ask react to store some data for us and give use the ability to set and get that data. The data will remain the same each time the component renders until we explicitly change it. An example is the results of calling our weather API. Later, we will add a search box and button that will call the API and update the state.
 - [`useEffect`](https://reactjs.org/docs/hooks-effect.html): tell react that we want to execute some code that could "effect" what is rendered. An example is calling our express server weather API.
-- [`useState`](https://reactjs.org/docs/hooks-state.html): ask react to store some data for us and give use the ability to set and get that data. The data will remain the same until it gets set to something else. An example is the results of calling our weather API. Later, we will add a search box and button that will call the API and update the state.
+
+Now that we know how and where we will store the data, we have to add the code to call our weather API!
 
 1. Add [axios](https://github.com/axios/axios) to your react app. We previously used axios to call the here and Dark Sky APIs. We will now use axios to call _our_ express server weather API 🚀!
 
@@ -412,19 +422,19 @@ To accomplish the above points, we use [react "hooks"](https://reactjs.org/docs/
 
    ![forecast](./images/forecast-fixed-annecy.jpg)
 
-## 9 State Management
+## 10 State Management
 
 Managing state is a complicated task. Large projects often store the majority of the state in a single place, called "global state". [Redux](https://redux.js.org/) is a tool for managing state. [react-redux](https://react-redux.js.org/) is library to work with redux in React.
 
-## 10 Build out the forecast component
+## 11 Build out the forecast component
 
-#### Exercise 10.1: Using the work you did to create a beautiful forecast with the pug templates with the express server, complete the `<Forecast>` component to show the summary, date, min and max temperatures for each day.
+#### Exercise 11.1: Using the work you did to create a beautiful forecast with the pug templates with the express server, complete the `<Forecast>` component to show the summary, date, min and max temperatures for each day.
 
 💡 Hint: consider creating a separate `<Day>` component to simplify the code inside the `<Forecast>` component.
 
-Find inspiration from [weather.cpinfo.cecilecody.life](https://weather.cpinfo19.cecilecody.life).
+Find inspiration from [weather.cpinfo.cecilecody.life](https://weather.cpinfo19.cecilecody.life). _⚠️ Don't lose too much time adding CSS, we will take care of that in a later step!_
 
-## 11 Add the search box
+## 12 Add the search box
 
 The application still does not yet allow us to search for a city.
 
@@ -488,23 +498,23 @@ In HTML, we would create a simple search bar like so:
 
 1. Test the `SearchBar` in Chrome. Note that the search value is logged to the developer tools console.
 
-#### Exercise 11.1: Connect the `searchCity()` function in the `<App>` component to the `<SearchBar>` `onSubmit` handler.
+#### Exercise 12.1: Connect the `searchCity()` function in the `<App>` component to the `<SearchBar>` `onSubmit` handler.
 
 💡 Hint: _pass_ the `searchCity` function as a **property** to the `<SearchBar>` component.
 
 ⚠️ Warning: be sure to remove `useEffect()` from the `<App>` component once the search bar is working.
 
-#### Bonus 11.2: It is also possible to "automatically" search as the user types. Modify the `<SearchBar>` to eliminate the need for the user to click on the Search button.
+#### Bonus 12.2: It is also possible to "automatically" search as the user types. Modify the `<SearchBar>` to eliminate the need for the user to click on the Search button.
 
 See [weather.cpinfo19.cecilecody.life](https://weather.cpinfo19.cecilecody.life) for an example.
 
 💡 Hint: the package [`use-debounce`](https://github.com/xnimorz/use-debounce) provides an excellent implementation that delays (or "debounces") changes until the user _stops_ typing for 1000 ms. See the [Debounced Callbacks](https://github.com/xnimorz/use-debounce#debounced-callbacks) documentation.
 
-#### Bonus 11.3: Give the user the option to change the forecast language.
+#### Bonus 12.3: Give the user the option to change the forecast language.
 
-#### Bonus 11.4 Give the user the option to change the forecast units (Celsius vs Fahrenheit).
+#### Bonus 12.4 Give the user the option to change the forecast units (Celsius vs Fahrenheit).
 
-## 12 Multiple pages
+## 13 Multiple pages
 
 Our application only contains a single page. There are multiple ways to use react with applications that present multiple pages to the user.
 
@@ -520,4 +530,4 @@ Our application only contains a single page. There are multiple ways to use reac
 
 [Next.js](https://nextjs.org/) allows **server side rendering** where pages can be rendered on a server (similar to static sites) _and_ routing can be done on the client. This requires a server that can render pages dynamically on demand. The advantage to server side rendering is that servers often have more resources available than clients and the time that a page is completely rendered for the user can be faster.
 
-#### Bonus 12.1: Use one of the above tools to add a recent cities page (remember to store the recent cities in cloud firestore). Allow navigating between the recent cities and a forecast page.
+#### Bonus 13.1: Use one of the above tools to add a recent cities page (remember to store the recent cities in cloud firestore). Allow navigating between the recent cities and a forecast page.
