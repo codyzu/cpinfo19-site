@@ -459,8 +459,7 @@ In HTML, we would create a simple search bar like so:
    ```jsx
    const SearchBar = () => (
      <form>
-       <label>City:</label>
-       <input type="text" />
+       <input type="text" placeholder="City" />
        <button type="submit">Search</button>
      </form>
    );
@@ -485,8 +484,12 @@ In HTML, we would create a simple search bar like so:
 
      return (
        <form onSubmit={handleSubmit}>
-         <label>City:</label>
-         <input type="text" value={city} onChange={handleCityChange} />
+         <input
+           type="text"
+           placeholder="City"
+           value={city}
+           onChange={handleCityChange}
+         />
          <button type="submit">Search</button>
        </form>
      );
@@ -514,7 +517,67 @@ See [weather.cpinfo19.cecilecody.life](https://weather.cpinfo19.cecilecody.life)
 
 #### Bonus 12.4 Give the user the option to change the forecast units (Celsius vs Fahrenheit).
 
-## 13 Multiple pages
+## 13 Styling
+
+Functionally, our weather app is working, but it is _still **ugly**_! We can easily add some style with CSS. One option would be to manually improve the `style` property of the html elements.
+
+Or we can use some **preconfigured styling**.
+
+[Bootstrap]() from twitter provides some excellent CSS templates. We will only use some of the form styling, but Bootstrap offers so much more.
+
+1. Add some more dependencies to our project.
+
+   ```cmd
+   yarn add bootstrap jquery popper.js
+   ```
+
+   - Bootstrap requires [jquery](https://jquery.com/) and [popper.js](https://popper.js.org/), but they are not installed automatically. Therefor, we must install them explicitly.
+
+1. Add bootstrap to `src/index.js`:
+
+   ```javascript
+   import React, { useReducer } from "react";
+   import ReactDOM from "react-dom";
+   import "bootstrap/dist/css/bootstrap.min.css";
+   import "bootstrap";
+   ```
+
+1. React lets us add CSS classes with the `className` property. **`class` is a reserved word in JavaScript, so always use `className` in React.** Lets rework the `<SearchBar>` form with some style:
+
+   ```jsx
+   const SearchBar = props => {
+     // ...
+
+     return (
+       <form onSubmit={handleSubmit} className="form-inline">
+         <input
+           type="text"
+           className="form-control"
+           placeholder="City"
+           onChange={e => debounceSearch(e.target.value)}
+         />
+         <button type="submit" className="btn btn-primary">
+           Search
+         </button>
+       </form>
+     );
+   };
+   ```
+
+   - 👓 Note the use of the `className` properties in `<form>`, `<input>`, and `<button>`.
+   - Refer the [Bootstrap documentation](https://getbootstrap.com/docs/4.4/getting-started/introduction/) for reference on how the styling works.
+
+1. Observe the calculator in Chrome. There should be some beautiful style:
+
+   ![calculator with bootstrap](./images/forecast-bootstrap.jpg)
+
+#### Exercise 13.1: Modify the CSS classes to give the app some beautiful style.
+
+Refer to [weather.cpinfo19.cecilecody.life](https://weather.cpinfo19.cecilecody.life) for inspiration.
+
+- 💪 **BONUS: You can also use [Reactstrap](https://reactstrap.github.io/) and [React-icons](https://react-icons.netlify.com/#/) to use react components avoid adding classes manually. Plus some cool icons. _This is how [weather.cpinfo19.cecilecody.life](https://weather.cpinfo19.cecilecody.life) works._**
+
+## 14 Multiple pages
 
 Our application only contains a single page. There are multiple ways to use react with applications that present multiple pages to the user.
 
@@ -530,4 +593,4 @@ Our application only contains a single page. There are multiple ways to use reac
 
 [Next.js](https://nextjs.org/) allows **server side rendering** where pages can be rendered on a server (similar to static sites) _and_ routing can be done on the client. This requires a server that can render pages dynamically on demand. The advantage to server side rendering is that servers often have more resources available than clients and the time that a page is completely rendered for the user can be faster.
 
-#### Bonus 13.1: Use one of the above tools to add a recent cities page (remember to store the recent cities in cloud firestore). Allow navigating between the recent cities and a forecast page.
+#### Bonus 14.1: Use one of the above tools to add a recent cities page (remember to store the recent cities in cloud firestore). Allow navigating between the recent cities and a forecast page.
