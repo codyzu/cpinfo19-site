@@ -1,5 +1,6 @@
 ---
 title: Module 5 - React
+redirect_from: /m5
 ---
 
 # Module 5 - React weather interface
