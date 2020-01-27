@@ -78,6 +78,12 @@ Here you will find resources for the CPINFO-19 web dev course.
 
 ### 👩‍🔧 [Cloud Deployment](m6/cloud-deployment)
 
+<!-- ## Exam 2 📝
+
+## [Vote](https://vote.cpinfo19.cecilecody.life)
+
+- [vote app source](https://github.com/codyzu/cpinfo19-vote) -->
+
 <!-- <div class="card border-info" style="max-width: 50em">
   <h2 class="card-header">Module 1: JavaScript Intro</h2>
   <div class="card-body">
