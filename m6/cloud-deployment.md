@@ -99,7 +99,7 @@ yarn add axios lodash
 1. Test your application
 
 
-## Bonus: Use firestore in your app
+## Bonus: Use firestore in your app to track recent cities and or provide accounts to remember the previous city.
 
 ## Bonus: Use next.js, gatsby, or react-router to create multiple pages in your app
 

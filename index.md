@@ -68,6 +68,14 @@ Here you will find resources for the CPINFO-19 web dev course.
 - ### [NoSQL](m4/nosql-vs-sql)
   - Advantages / Disadvantages
 
+### ✔️ [Results](https://docs.google.com/spreadsheets/d/e/2PACX-1vR7z7a0i6DBzkh7M4pu3MpoBQPoFksyp6Wafu8MXNSi_neBc8lno5jGIDISBhsB-VE0Jrp6i6zYvMjx/pubhtml?gid=1743361712&single=true)
+
+## Module 6: Cloud
+
+### 📺 [Introduction to Cloud](m6/cloud-intro)
+
+### 👩‍🔧 [Cloud Deployment](m6/cloud-deployment)
+
 <!-- <div class="card border-info" style="max-width: 50em">
   <h2 class="card-header">Module 1: JavaScript Intro</h2>
   <div class="card-body">
