@@ -82,9 +82,32 @@ Here you will find resources for the CPINFO-19 web dev course.
 
 ## Exam 2 📝
 
-## [Vote](https://vote.cpinfo19.cecilecody.life)
+### [Vote](https://vote.cpinfo19.cecilecody.life)
 
 - [vote app source](https://github.com/codyzu/cpinfo19-vote)
+
+### ✔️ [Review]
+
+- ### [Module 1 Introduction Activity](m1/group-activity)
+  - Java vs JavaScript
+  - node.js
+  - JavaScript types
+  - npm
+- ### [Express](m3/backend-web-server)
+  - Add a route with a URL parameter
+  - Using a pug template with an express server
+- ### [NoSQL](m4/nosql-vs-sql)
+  - Advantages / Disadvantages
+- ### [React](m5/react-weather)
+  - What is it?
+  - What problems does it solve?
+  - How does react help us organize re-usable code?
+  - What are properties and state?
+  - How to share state between components?
+  - Write a simple component using properties
+- ### [Cloud](m6/cloud-intro)
+  - What is the cloud?
+  - Advantages / Disadvantages to using cloud services
 
 <!-- <div class="card border-info" style="max-width: 50em">
   <h2 class="card-header">Module 1: JavaScript Intro</h2>
