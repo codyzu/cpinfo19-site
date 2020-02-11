@@ -86,7 +86,7 @@ Here you will find resources for the CPINFO-19 web dev course.
 
 - [vote app source](https://github.com/codyzu/cpinfo19-vote)
 
-### ✔️ [Review]
+### ✔️ Review
 
 - ### [Module 1 Introduction Activity](m1/group-activity)
   - Java vs JavaScript
