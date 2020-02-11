@@ -103,6 +103,7 @@ Here you will find resources for the CPINFO-19 web dev course.
   - What problems does it solve?
   - How does react help us organize re-usable code?
   - What are properties and state?
+  - How to pass properties to components?
   - How to share state between components?
   - Write a simple component using properties
 - ### [Cloud](m6/cloud-intro)
