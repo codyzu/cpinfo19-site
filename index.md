@@ -80,6 +80,18 @@ Here you will find resources for the CPINFO-19 web dev course.
 
 ---
 
+## Module 7: Testing
+
+### 👩‍🔧 [Testing React(m7/react-tests)
+
+---
+
+<!--
+## [Course Evaluation 📝](https://docs.google.com/forms/d/e/1FAIpQLSdI_N4siZEmtzoTgLvTj-f83o0Tknnbt26Vf9765AiC6IQWAw/viewform?usp=sf_link)
+
+---
+-->
+
 ## Exam 2 📝
 
 ### [Vote](https://vote.cpinfo19.cecilecody.life)
@@ -109,8 +121,6 @@ Here you will find resources for the CPINFO-19 web dev course.
 - ### [Cloud](m6/cloud-intro)
   - What is the cloud?
   - Advantages / Disadvantages to using cloud services
-
-<!-- ## [Course Evaluation 📝](https://docs.google.com/forms/d/e/1FAIpQLSdI_N4siZEmtzoTgLvTj-f83o0Tknnbt26Vf9765AiC6IQWAw/viewform?usp=sf_link) -->
 
 <!-- <div class="card border-info" style="max-width: 50em">
   <h2 class="card-header">Module 1: JavaScript Intro</h2>
