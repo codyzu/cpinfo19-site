@@ -82,7 +82,7 @@ Here you will find resources for the CPINFO-19 web dev course.
 
 ## Module 7: Testing
 
-### 👩‍🔧 [Testing React(m7/react-tests)
+### 👩‍🔧 [Testing React](m7/react-tests)
 
 ---
 
