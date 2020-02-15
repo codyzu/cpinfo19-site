@@ -110,6 +110,8 @@ Here you will find resources for the CPINFO-19 web dev course.
   - What is the cloud?
   - Advantages / Disadvantages to using cloud services
 
+<!-- ## [Course Evaluation 📝](https://docs.google.com/forms/d/e/1FAIpQLSdI_N4siZEmtzoTgLvTj-f83o0Tknnbt26Vf9765AiC6IQWAw/viewform?usp=sf_link) -->
+
 <!-- <div class="card border-info" style="max-width: 50em">
   <h2 class="card-header">Module 1: JavaScript Intro</h2>
   <div class="card-body">
