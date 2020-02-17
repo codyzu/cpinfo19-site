@@ -86,11 +86,9 @@ Here you will find resources for the CPINFO-19 web dev course.
 
 ---
 
-<!--
 ## [Course Evaluation 📝](https://docs.google.com/forms/d/e/1FAIpQLSdI_N4siZEmtzoTgLvTj-f83o0Tknnbt26Vf9765AiC6IQWAw/viewform?usp=sf_link)
 
 ---
--->
 
 ## Exam 2 📝
 
